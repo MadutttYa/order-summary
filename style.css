@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    height: calc(100vh - 1px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--pale-blue);
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--very-pale-blue);
+    max-width: 300px;
+    border-radius: 20px;
+}
+
+.img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.desc {
+    text-align: center;
+    padding: 20px;
+}
+
+.desc h1 {
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+.desc p {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--desaturated-blue);
+}
+
+.plan-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.plan-box-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.plan-box-left p {
+    color: var(--desaturated-blue);
+}
+
+.music-icon {
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.proceed {
+    background-color: var(--bright-blue);
+    color: var(--very-pale-blue);
+    padding: 10px 50px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: background-color ease .3s;
+}
+
+.proceed:hover {
+    background-color: var(--desaturated-blue);
+}
+
+.cancel {
+    color: var(--desaturated-blue);
+    margin-bottom: 20px;
+    transition: all ease .3s ;
+}
+
+.cancel:hover {
+    color: var(--dark-blue);
+    font-weight: 700;
+}
+
+@media (max-width: 425px){
+    body{
+        background-image: url(./images/pattern-background-mobile.svg);
+    }
+
+    .container{
+        max-width: 87%;
+        font-size: 14px;
+    }
+
+    .plan-box a {
+        margin-left: 10px;
+    }
+
+    .plan-box-left{
+        margin-right: 10px;
+    }
+
+    .music-icon {
+        margin-right: 10px;
+    }
+
+    .proceed{
+        padding: 10px 40px;
+        width: 100%;
+    }
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; margin-top: 20px;}
+.attribution a { color: hsl(228, 45%, 44%); }
